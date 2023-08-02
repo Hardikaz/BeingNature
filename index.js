@@ -21,6 +21,7 @@ let i=0;
 
     next.onclick = function(){
         if(i<5){
+           
         hero.style.backgroundImage='url("'+backgroundImg[i+1]+'")';
         thumbnail[i+1].classList.add("active");
         thumbnail[i].classList.remove("active");
@@ -31,6 +32,7 @@ let i=0;
  
 prev.onclick = function(){
     if(i>0){
+    
     hero.style.backgroundImage='url("'+backgroundImg[i-1]+'")';
     thumbnail[i-1].classList.add("active");
     thumbnail[i].classList.remove("active");
