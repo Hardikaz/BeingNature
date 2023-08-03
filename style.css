@@ -62,7 +62,7 @@ button{
 }
 
 .container{
-    width: 50%;
+    width: 40%;
     height: 100vh;
     background: rgba(86, 86, 86, 0.3);
     backdrop-filter: blur(10px);

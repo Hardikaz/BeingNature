@@ -49,8 +49,12 @@ for(var x=0;x<thumbnail.length;x++)
         var c=document.getElementsByClassName("active");
         c[0].className=c[0].className.replace("active","");
         
-        console.log(event.target);
-        hero.style.backgroundImage='url("'+backgroundImg[i]+'")';
+        
+        var url=event.target.src;
+        
+        var n=url.substring(31,32);
+       
+        hero.style.backgroundImage="url(Images/bg"+n+".jpg)";
         this.className += " active";
     });
 
