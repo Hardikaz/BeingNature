@@ -25,7 +25,7 @@ let i=0;
         hero.style.backgroundImage='url("'+backgroundImg[i+1]+'")';
         thumbnail[i+1].classList.add("active");
         thumbnail[i].classList.remove("active");
-        console.log(i);
+       
         i++;
 }
 }
@@ -36,9 +36,24 @@ prev.onclick = function(){
     hero.style.backgroundImage='url("'+backgroundImg[i-1]+'")';
     thumbnail[i-1].classList.add("active");
     thumbnail[i].classList.remove("active");
-    console.log(i);
+   
     i--;
 }
 
 
+}
+
+for(var x=0;x<thumbnail.length;x++)
+{
+    thumbnail[x].addEventListener('click', function(event) {
+        var c=document.getElementsByClassName("active");
+        c[0].className=c[0].className.replace("active","");
+        
+        console.log(event.target);
+        hero.style.backgroundImage='url("'+backgroundImg[i]+'")';
+        this.className += " active";
+    });
+
+
+      
 }
